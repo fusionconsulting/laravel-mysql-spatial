@@ -9,7 +9,7 @@ class SpatialExpression extends Expression
     public function getValue()
     {
         if( config('spatial.include_axis_order', false) )
-            return "ST_GeomFromText(?, ?, 'axis-order=long-lat')";
+            return "ST_GeomFromText(?, ?)";
         
         return "ST_GeomFromText(?, ?)";
     }
