@@ -6,7 +6,7 @@ use Illuminate\Database\Query\Expression;
 
 class SpatialExpression extends Expression
 {
-    public function getValue(Illuminate\Database\Grammar $grammar)
+    public function getValue()
     {
         if( config('spatial.include_axis_order', false) )
             return "ST_GeomFromText(?, ?)";
